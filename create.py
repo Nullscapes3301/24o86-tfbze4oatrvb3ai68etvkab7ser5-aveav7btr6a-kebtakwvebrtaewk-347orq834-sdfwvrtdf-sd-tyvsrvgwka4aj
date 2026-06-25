@@ -2,7 +2,6 @@ name = self.extarg1
 current = self.get_current()
 if " " in name:
   print("Invalid name. Please use a valid name without spaces.")
-  return
 if name == "":
   print("Invalid name. Please use a valid name without spaces.")
 elif name in current:
