@@ -5,7 +5,6 @@ if " " in name:
   return
 if name == "":
   print("Invalid name. Please use a valid name without spaces.")
-  return
 elif name in current:
   print("Already exists")
 elif name.endswith(".dir"):
