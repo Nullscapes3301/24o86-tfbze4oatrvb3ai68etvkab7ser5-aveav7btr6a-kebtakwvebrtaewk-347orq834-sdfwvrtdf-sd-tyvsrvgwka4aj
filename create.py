@@ -1,4 +1,3 @@
-#putOS.cer.ext:create
 name = self.extarg1
 current = self.get_current()
 if " " in name:
