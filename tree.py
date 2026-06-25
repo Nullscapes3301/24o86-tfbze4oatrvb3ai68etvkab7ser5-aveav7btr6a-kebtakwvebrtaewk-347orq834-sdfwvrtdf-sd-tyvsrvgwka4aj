@@ -2,24 +2,21 @@ if self.actual_dir.startswith("putOS/home.dir/"):
   pass
 else:
   print("Acces denied.")
-class Extension:
-    name = "tree"
+def run(self):
+  def show(node, prefix=""):
+      items = list(node.items())
 
-    def run(self):
-        def show(node, prefix=""):
-            items = list(node.items())
+      for i, (name, value) in enumerate(items):
+          last = i == len(items) - 1
+          branch = "└── " if last else "├── "
 
-            for i, (name, value) in enumerate(items):
-                last = i == len(items) - 1
-                branch = "└── " if last else "├── "
+          print(prefix + branch + name)
 
-                print(prefix + branch + name)
+          if isinstance(value, dict):
+              show(
+                  value,
+                  prefix + ("    " if last else "│   ")
+              )
 
-                if isinstance(value, dict):
-                    show(
-                        value,
-                        prefix + ("    " if last else "│   ")
-                    )
-
-        show(self.files)
-  run()
+  show(self.files)
+run()
