@@ -22,3 +22,4 @@ class Extension:
                     )
 
         show(self.files)
+  run()
