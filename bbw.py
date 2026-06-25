@@ -1,3 +1,3 @@
-#putOS.cer.ext:bww
+#putOS.cer.ext:bbw
 file = self.filecontent
 print(file)
