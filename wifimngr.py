@@ -1,5 +1,5 @@
+self.pr("putOS WiFi EZ manager")
 while True:
-  self.pr("putOS WiFi EZ manager")
   prompt=self.inp("WiFi > ")
   prompt=prompt.split(" ")
   if prompt[0] == "show":
