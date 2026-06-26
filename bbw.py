@@ -1,2 +1,2 @@
 file = self.filecontent
-print(file)
+self.pr(file)
