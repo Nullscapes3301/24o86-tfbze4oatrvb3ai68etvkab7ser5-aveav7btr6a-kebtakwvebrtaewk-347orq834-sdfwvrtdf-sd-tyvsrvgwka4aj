@@ -1,2 +1,2 @@
 import datetime
-print(datetime.datetime.now())
+self.pr(datetime.datetime.now())
