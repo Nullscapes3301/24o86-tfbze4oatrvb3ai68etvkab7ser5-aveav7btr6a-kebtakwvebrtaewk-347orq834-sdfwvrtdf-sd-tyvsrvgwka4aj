@@ -5,7 +5,7 @@ def ping(host):
     try:
         host = self.extarg1
         ip = socket.gethostbyname(host)
-        print(f"Ping to {host} [{ip}]")
+        self.pr(f"Ping to {host} [{ip}]")
 
         start = time.time()
 
@@ -16,10 +16,10 @@ def ping(host):
 
         ms = (end - start) * 1000
 
-        print(f"Awnser from {ip}: time={ms:.2f}ms")
+        self.pr(f"Awnser from {ip}: time={ms:.2f}ms")
 
     except socket.timeout:
-        print("Timeout has finished")
+        self.pr("Timeout has finished")
 
     except Exception:
-        print("Cannot resolve host")
+        self.pr("Cannot resolve host")
