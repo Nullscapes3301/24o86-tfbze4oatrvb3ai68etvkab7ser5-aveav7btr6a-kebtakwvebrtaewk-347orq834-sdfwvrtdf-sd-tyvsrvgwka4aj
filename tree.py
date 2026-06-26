@@ -1,7 +1,7 @@
 if self.actual_dir.startswith("putOS/home.dir/"):
   pass
 else:
-  print("Acces denied.")
+  self.pr("Acces denied.")
 def tree(node, prefix=""):
     items = list(node.items())
 
@@ -9,7 +9,7 @@ def tree(node, prefix=""):
         last = i == len(items) - 1
         branch = "└── " if last else "├── "
 
-        print(prefix + branch + name)
+        self.pr(prefix + branch + name)
 
         if isinstance(value, dict):
             tree(value, prefix + ("    " if last else "│   "))
