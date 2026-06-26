@@ -1,11 +1,11 @@
 name = self.extarg1
 current = self.get_current()
 if " " in name:
-  print("Invalid name. Please use a valid name without spaces.")
+  self.pr("Invalid name. Please use a valid name without spaces.")
 if name == "":
-  print("Invalid name. Please use a valid name without spaces.")
+  self.pr("Invalid name. Please use a valid name without spaces.")
 elif name in current:
-  print("Already exists")
+  self.pr("Already exists")
 elif name.endswith(".dir"):
   current[name] = {}
 else:
