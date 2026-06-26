@@ -1,1 +1,1 @@
-self.execute_command(f"change dir {self.extarg1}")
+self.execute_command(f"change dir {self.extarg1}.dir")
