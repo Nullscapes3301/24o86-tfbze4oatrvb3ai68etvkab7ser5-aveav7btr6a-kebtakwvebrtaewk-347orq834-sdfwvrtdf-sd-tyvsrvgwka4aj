@@ -3,8 +3,7 @@ from pywifi import const
 import time
 wifi = pywifi.PyWiFi()
 if len(wifi.interfaces()) == 0:
-    self.pr("No WiFi adapter found")
-    return
+    raise Exception("No WiFi adapter found")
 iface = wifi.interfaces()[0]
 if hasattr(self, "wifidata") and self.wifidata:
   pass
