@@ -1,4 +1,6 @@
 if self.extarg1 == "save":
-  self.route = self.actual_dir
+  self.goto = self.actual_dir
+elif self.extarg1 == "del":
+  self.goto = ""
 else:
-  self.actual_dir = self.route
+  self.actual_dir = self.goto
