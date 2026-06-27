@@ -1,19 +1,19 @@
 if self.extarg1 == "save":
-  self.goto = self.actual_dir
-  self.pr("Route saved")
+    self.goto = self.actual_dir
+    self.pr("Route saved")
+
 elif self.extarg1 == "show":
-  try:
-    self.pr(self.goto)
-  except:
-    self.pr("No route saved")
-elif self.extarg1 == "del":
-  self.goto = ""
-  self.pr("Route deleted")
-else:
-  try:
-    if self.goto == "":
-      self.pr("No route saved")
+    if hasattr(self, "goto") and self.goto:
+        self.pr(self.goto)
     else:
-      self.actual_dir = self.goto
-  except:
-    self.pr("No route saved")
+        self.pr("No route saved")
+
+elif self.extarg1 == "del":
+    self.goto = ""
+    self.pr("Route deleted")
+
+else:
+    if hasattr(self, "goto") and self.goto:
+        self.actual_dir = self.goto
+    else:
+        self.pr("No route saved")
