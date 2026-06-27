@@ -7,10 +7,13 @@ elif self.extarg1 == "show":
   except:
     self.pr("No route saved")
 elif self.extarg1 == "del":
+  self.goto = ""
   self.pr("Route deleted")
 else:
-  if not self.goto == "":
-      try:
+  if self.goto == "":
+    self.pr("No route saved")
+  else:
+    try:
         self.pr(self.goto)
       except:
         self.pr("No route saved")
