@@ -14,6 +14,6 @@ else:
     if self.goto == "":
       self.pr("No route saved")
     else:
-      self.pr(self.goto)
+      self.actual_dir = self.goto
   except:
     self.pr("No route saved")
