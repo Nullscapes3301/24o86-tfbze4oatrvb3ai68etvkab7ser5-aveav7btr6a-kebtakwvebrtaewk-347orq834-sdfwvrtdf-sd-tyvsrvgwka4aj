@@ -4,7 +4,7 @@ if self.extarg1 == "save":
 elif self.extarg1 == "show":
   self.pr(self.goto)
 elif self.extarg1 == "del":
-  self.goto = ""
   self.pr("Route deleted")
 else:
-  self.actual_dir = self.goto
+  if not self.goto == "":
+    self.actual_dir = self.goto
