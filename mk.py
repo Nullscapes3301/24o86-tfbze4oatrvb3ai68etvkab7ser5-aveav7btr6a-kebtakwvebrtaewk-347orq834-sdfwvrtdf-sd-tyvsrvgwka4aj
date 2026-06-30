@@ -1,5 +1,7 @@
 name = self.extarg1
 current = self.get_current()
+if "/" in name:
+  self.pr("Invalid name. Please use a valid name without '/'")
 if " " in name:
   self.pr("Invalid name. Please use a valid name without spaces.")
 if name == "":
