@@ -1,3 +1,7 @@
+if self.user == "system":
+  pass
+else:
+  self.pr("Access denied")
 name = self.extarg1
 current = self.get_current()
 if "/" in name:
