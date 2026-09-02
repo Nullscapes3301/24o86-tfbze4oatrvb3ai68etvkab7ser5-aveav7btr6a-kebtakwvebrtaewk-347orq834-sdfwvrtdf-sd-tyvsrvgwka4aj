@@ -86,5 +86,6 @@ while True:
     pass
   elif prompt[0] == "exit":
     self.files["putOS/"]["home.dir"]["AppData.dir"]["Local.dir"]["wifimngr.dir"]["wifidata.wifi"] = str(self.wifidata)
+    break
   else:
     self.pr("Invalid command:", prompt[0])
