@@ -85,7 +85,8 @@ while True:
   elif prompt[0] == "":
     pass
   elif prompt[0] == "exit":
-    self.files["putOS/"]["home.dir"]["AppData.dir"]["Local.dir"]["wifimngr.dir"]["wifidata.wifi"] = str(self.wifidata)
-    break
+    self.files["putOS/"]["home.dir"]["AppData.dir"]["Local.dir"]["wifimngr.dir"]["wifidata.wifi"] = str(self.wifidata)    
+    import sys
+      sys.exit()
   else:
     self.pr("Invalid command:", prompt[0])
