@@ -9,7 +9,7 @@ if hasattr(self, "wifidata") and self.wifidata:
   pass
 else:
   self.wifidata = {}
-if "wifimngr.dir" in self.files["home.dir"]["AppData.dir"]["Local.dir"]:
+if "wifimngr.dir" in self.files["home.dir"]["AppData.dir"]["Local.dir"] and "wifidata.wifi" in self.files["home.dir"]["AppData.dir"]["Local.dir"]["wifimngr.dir"]:
     self.wifidata = eval(self.files["home.dir"]["AppData.dir"]["Local.dir"]["wifimngr.dir"]["wifidata.wifi"])
 self.pr("putOS WiFi EZ manager")
 while True:
